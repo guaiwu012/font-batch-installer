@@ -1,0 +1,52 @@
+name: Bug 报告
+description: 字体包打不开、识别错误、安装失败或界面异常
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢你帮忙把问题说清楚。不需要上传受版权保护的商业字体文件。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 发生了什么？
+      description: 请描述实际结果，以及你原本期待的结果。
+      placeholder: 我把一个 ZIP 拖进窗口后……
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 如何复现？
+      placeholder: |
+        1. 打开字装一下
+        2. 拖入……
+        3. 点击……
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS 与芯片
+      placeholder: macOS 15.1 / Apple M2
+    validations:
+      required: true
+  - type: input
+    id: format
+    attributes:
+      label: 字体或压缩包格式
+      placeholder: ZIP 内含 OTF；或 TTC / TTF 等
+  - type: textarea
+    id: logs
+    attributes:
+      label: 补充信息
+      description: 可粘贴错误提示、截图或不含字体文件本体的目录结构。
+  - type: checkboxes
+    id: copyright
+    attributes:
+      label: 字体版权确认
+      options:
+        - label: 我没有公开上传无再分发授权的商业字体文件
+          required: true
+
